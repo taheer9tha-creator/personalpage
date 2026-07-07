@@ -13,12 +13,21 @@ document.querySelectorAll('a').forEach(link => {
     });
 });
 
-// Newsletter
+// Newsletter (No alert)
 document.querySelector(".newsletter button")
-.addEventListener("click", () => );
+.addEventListener("click", () => {
+    document.querySelector(".newsletter input").value = "";
+});
 
-// Search
+// Search (No alert)
 document.querySelector(".search-box button")
 .addEventListener("click", () => {
-    const query = document.querySelector(".search-box input").value;
+    const query = document.querySelector(".search-box input").value.trim();
+
+    if (query !== "") {
+        console.log("Searching for:", query);
+
+        // Optional: Clear the search box
+        document.querySelector(".search-box input").value = "";
+    }
 });
