@@ -15,18 +15,10 @@ document.querySelectorAll('a').forEach(link => {
 
 // Newsletter
 document.querySelector(".newsletter button")
-.addEventListener("click", () => {
-    alert("Thank you for subscribing!");
-});
+.addEventListener("click", () => );
 
 // Search
 document.querySelector(".search-box button")
 .addEventListener("click", () => {
     const query = document.querySelector(".search-box input").value;
-
-    if(query===""){
-        alert("Please enter a keyword.");
-    }else{
-        alert("Searching for: " + query);
-    }
 });
